@@ -25,48 +25,101 @@
   <main>
     <section>
       <div class="planet-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4 p-4">
+        <h2 class="text-xl font-bold col-span-full">Planetas do Sistema Solar</h2>
 
-        <button class="card bg-gray-700 rounded-lg shadow-md p-4">
+        <button id="card" class="card bg-gray-700 rounded-lg shadow-md p-4 hover:bg-gray-600 transition duration-300">
           <img src="src/images/Mercurio.png" alt="Mercúrio" class="aspect-square object-cover">
         </button>
 
-        <button class="card bg-gray-700 rounded-lg shadow-md p-4">
-        <img src="src/images/Venus.png" alt="Vênus" class="aspect-square object-cover">
+        <button id="card" class="card bg-gray-700 rounded-lg shadow-md p-4 hover:bg-gray-600 transition duration-300">
+          <img src="src/images/Venus.png" alt="Vênus" class="aspect-square object-cover">
         </button>
 
-        <button class="card bg-gray-700 rounded-lg shadow-md p-4">
-        <img src="src/images/Terra.png" alt="Terra" class="aspect-square object-cover">
+        <button id="card" class="card bg-gray-700 rounded-lg shadow-md p-4 hover:bg-gray-600 transition duration-300">
+          <img src="src/images/Terra.png" alt="Terra" class="aspect-square object-cover">
         </button>
 
-        <button class="card bg-gray-700 rounded-lg shadow-md p-4">
-        <img src="src/images/Marte.png" alt="Marte" class="aspect-square object-cover">
+        <button id="card" class="card bg-gray-700 rounded-lg shadow-md p-4 hover:bg-gray-600 transition duration-300">
+          <img src="src/images/Marte.png" alt="Marte" class="aspect-square object-cover">
         </button>
 
-        <button class="card bg-gray-700 rounded-lg shadow-md p-4">
-        <img src="src/images/Jupiter.png" alt="Jupiter" class="aspect-square object-cover">
+        <button id="card" class="card bg-gray-700 rounded-lg shadow-md p-4 hover:bg-gray-600 transition duration-300">
+          <img src="src/images/Jupiter.png" alt="Jupiter" class="aspect-square object-cover">
         </button>
 
-        <button class="card bg-gray-700 rounded-lg shadow-md p-4">
-        <img src="src/images/Saturno.png" alt="Saturno" class="aspect-square object-cover">
+        <button id="card" class="card bg-gray-700 rounded-lg shadow-md p-4 hover:bg-gray-600 transition duration-300">
+          <img src="src/images/Saturno.png" alt="Saturno" class="aspect-square object-cover">
         </button>
 
-        <button class="card bg-gray-700 rounded-lg shadow-md p-4">
-        <img src="src/images/Urano.png" alt="Urano" class="aspect-square object-cover">
+        <button id="card" class="card bg-gray-700 rounded-lg shadow-md p-4 hover:bg-gray-600 transition duration-300">
+          <img src="src/images/Urano.png" alt="Urano" class="aspect-square object-cover">
         </button>
 
-        <button class="card bg-gray-700 rounded-lg shadow-md p-4">
-        <img src="src/images/Netuno.png" alt="Netuno" class="aspect-square object-cover">
+        <button id="card" class="card bg-gray-700 rounded-lg shadow-md p-4 hover:bg-gray-600 transition duration-300">
+          <img src="src/images/Netuno.png" alt="Netuno" class="aspect-square object-cover">
         </button>
-
-        <div class="overlay">
-
-        </div>
       </div>
     </section>
+
+    <section>
+      <div class="banner relative overflow-hidden rounded-lg m-4 shadow-lg ">
+        <img id="banner-image" src="src/images/KSC.jpg" alt="Banner Image" class="w-full h-64 object-cover transition-opacity duration-1000">
+        <h2 id="title-banner" class="text-2xl font-bold text-center">Titulo</h2>
+        <p id="description-banner">Descrição</p>
+      </div>
+    </section>
+
+    <div class="overlay bg-black bg-opacity-50 fixed inset-0 hidden" id="overlay">
+      <div class="modal bg-gray-800 rounded-lg shadow-lg p-6 w-11/12 md:w-1/2 lg:w-1/3 mx-auto mt-20">
+        <h2 class="text-2xl font-bold mb-4" id="modal-title">Título do Planeta</h2>
+        <p class="mb-4" id="modal-description">Descrição do planeta...</p>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300"
+          id="close-modal">Fechar</button>
+      </div>
+    </div>
   </main>
   <footer class="bg-gray-800 text-white p-4 text-center">
     <p>&copy; 2026 DocSpace. All rights reserved.</p>
   </footer>
+
+  <script>
+    const BannerImages = [
+      "src/images/artemis-ii-at-the-pad-full-snow.jpg",
+      "src/images/KSC.jpg",
+      "src/images/samplecollection-2crew-xeva-final2.png"
+    ]
+
+    const BannerTitles = [
+      "Artemis II at the Pad",
+      "Crew-7 Prelaunch Activities",
+      "Crew-2 Sample Collection"
+    ]
+
+    const BannerDescriptions = [
+      "A NASA's Artemis II mission is set to launch in 2024, marking a significant milestone in human space exploration. This mission will be the first crewed flight of the Artemis program, which aims to return humans to the Moon and eventually establish a sustainable presence there. The Artemis II spacecraft will carry astronauts on a journey around the Moon, testing critical systems and paving the way for future lunar missions.",
+      "As the Crew-7 mission approaches its launch date, astronauts are engaged in rigorous prelaunch activities to ensure a successful mission. These activities include final training sessions, equipment checks, and simulations to prepare for the challenges of space travel. The Crew-7 mission is part of NASA's ongoing efforts to expand human presence in space and conduct important scientific research aboard the International Space Station.",
+      "The Crew-2 mission has successfully completed its sample collection activities, bringing back valuable data and materials from space. This mission involved astronauts conducting various experiments and collecting samples that will help scientists better understand the effects of microgravity on biological organisms and materials. The findings from Crew-2 will contribute to our knowledge of how living organisms adapt to space conditions and inform future long-duration missions."
+    ]
+
+    let currentBannerIndex = 0;
+    const bannerImageElement = document.querySelector('#banner-image');
+    const bannerTitleElement = document.getElementById('title-banner');
+    const bannerDescriptionElement = document.getElementById('description-banner');
+
+    setInterval(() => {
+      currentBannerIndex = (currentBannerIndex + 1) % BannerImages.length;
+      bannerImageElement.style.opacity = 0;
+
+      setTimeout(() => {
+        bannerImageElement.src = BannerImages[currentBannerIndex];
+        bannerTitleElement.textContent = BannerTitles[currentBannerIndex];
+        bannerDescriptionElement.textContent = BannerDescriptions[currentBannerIndex];
+        bannerImageElement.style.opacity = 1;
+      }, 1000);
+    }, 5000);
+  </script>
+
+  <script src="src/main.js"></script>
 </body>
 
 </html>
