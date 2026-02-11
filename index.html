@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="src/style.css">
   <title>DocSpace</title>
 </head>
-<body>
-  <header class="bg-gray-800 text-white p-4 flex space-x-4"></head>
+
+<body class="bg-gray-900 text-white">
+  <header class="bg-gray-800 text-white p-4 flex space-x-4">
+    </head>
     <h1 class="text-1xl font-bold">DocSpace</h1>
 
     <nav>
@@ -21,12 +24,49 @@
   </header>
   <main>
     <section>
-      <h1 class="text-center">DocSpace</h1>
-      <h2 class="text-center">É um documentario que fala sobre planetas , estrelas , cometas e muito mais!</h2>
+      <div class="planet-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4 p-4">
+
+        <button class="card bg-gray-700 rounded-lg shadow-md p-4">
+          <img src="src/images/Mercurio.png" alt="Mercúrio" class="aspect-square object-cover">
+        </button>
+
+        <button class="card bg-gray-700 rounded-lg shadow-md p-4">
+        <img src="src/images/Venus.png" alt="Vênus" class="aspect-square object-cover">
+        </button>
+
+        <button class="card bg-gray-700 rounded-lg shadow-md p-4">
+        <img src="src/images/Terra.png" alt="Terra" class="aspect-square object-cover">
+        </button>
+
+        <button class="card bg-gray-700 rounded-lg shadow-md p-4">
+        <img src="src/images/Marte.png" alt="Marte" class="aspect-square object-cover">
+        </button>
+
+        <button class="card bg-gray-700 rounded-lg shadow-md p-4">
+        <img src="src/images/Jupiter.png" alt="Jupiter" class="aspect-square object-cover">
+        </button>
+
+        <button class="card bg-gray-700 rounded-lg shadow-md p-4">
+        <img src="src/images/Saturno.png" alt="Saturno" class="aspect-square object-cover">
+        </button>
+
+        <button class="card bg-gray-700 rounded-lg shadow-md p-4">
+        <img src="src/images/Urano.png" alt="Urano" class="aspect-square object-cover">
+        </button>
+
+        <button class="card bg-gray-700 rounded-lg shadow-md p-4">
+        <img src="src/images/Netuno.png" alt="Netuno" class="aspect-square object-cover">
+        </button>
+
+        <div class="overlay">
+
+        </div>
+      </div>
     </section>
   </main>
   <footer class="bg-gray-800 text-white p-4 text-center">
     <p>&copy; 2026 DocSpace. All rights reserved.</p>
   </footer>
 </body>
+
 </html>
