@@ -1,32 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="documentation.css">
   <title>DocSpace</title>
 </head>
-<body>
-  <header class="bg-gray-800 text-white p-4 flex space-x-4"></head>
+
+<body class="bg-gray-900 text-white">
+  <header class="bg-gray-800 text-white p-4 flex space-x-4">
+    </head>
     <h1 class="text-1xl font-bold">DocSpace</h1>
 
     <nav>
       <ul class="flex space-x-4">
-        <li><a href="../index.html" class="hover:text-gray-400">Home</a></li>
-        <li><a href="documentation.html" class="hover:text-gray-400">Documentation</a></li>
-        <li><a href="about.html" class="hover:text-gray-400">About</a></li>
-        <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
+        <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
+        <li><a href="src/documentation.html" class="hover:text-gray-400">Documentation</a></li>
+        <li><a href="src/about.html" class="hover:text-gray-400">About</a></li>
+        <li><a href="src/contact.html" class="hover:text-gray-400">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-    <main>
+  <main>
     <section>
-      
+      <!--H2-->
+      <div class="planet-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4 p-4">
+        <h2 class="text-xl font-bold col-span-full">Planetas</h2>
+
+        <button id="card" class="card bg-gray-700 rounded-lg shadow-md p-4 hover:bg-gray-600 transition duration-300">
+          <img src="images/Mercurio.png" alt="Mercúrio" class="aspect-square object-cover">
+        </button>
+
+        <button id="card" class="card bg-gray-700 rounded-lg shadow-md p-4 hover:bg-gray-600 transition duration-300">
+          <img src="images/Venus.png" alt="Vênus" class="aspect-square object-cover">
+        </button>
+
+        <button id="card" class="card bg-gray-700 rounded-lg shadow-md p-4 hover:bg-gray-600 transition duration-300">
+          <img src="images/Terra.png" alt="Terra" class="aspect-square object-cover">
+        </button>
+
+        <button id="card" class="card bg-gray-700 rounded-lg shadow-md p-4 hover:bg-gray-600 transition duration-300">
+          <img src="images/Marte.png" alt="Marte" class="aspect-square object-cover">
+        </button>
+
+        <button id="card" class="card bg-gray-700 rounded-lg shadow-md p-4 hover:bg-gray-600 transition duration-300">
+          <img src="images/Jupiter.png" alt="Jupiter" class="aspect-square object-cover">
+        </button>
+
+        <button id="card" class="card bg-gray-700 rounded-lg shadow-md p-4 hover:bg-gray-600 transition duration-300">
+          <img src="images/Saturno.png" alt="Saturno" class="aspect-square object-cover">
+        </button>
+
+        <button id="card" class="card bg-gray-700 rounded-lg shadow-md p-4 hover:bg-gray-600 transition duration-300">
+          <img src="images/Urano.png" alt="Urano" class="aspect-square object-cover">
+        </button>
+
+        <button id="card" class="card bg-gray-700 rounded-lg shadow-md p-4 hover:bg-gray-600 transition duration-300">
+          <img src="images/Netuno.png" alt="Netuno" class="aspect-square object-cover">
+        </button>
+      </div>
+
+
+      </div>
     </section>
+    <section>
+      <!--H2-->
+      <div class="planet-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4 4">
+        <h2 class="text-xl font-bold col-span-full text-center">Luas</h2>
+
+        <button id="cardLua" class="card bg-gray-700 rounded-lg shadow-md p-4 hover:bg-gray-600 transition duration-300">
+          <img src="https://picsum.photos/200" alt="Lua" class="aspect-square object-cover">
+          <p>NomeLua</p>
+        </button>
+
+      </div>
+    </section>
+    <section>
+      <div class="planet-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4 4">
+        <!--H2-->
+        <h2 class="text-xl font-bold col-span-full text-center">Estrelas</h2>
+        <button id="card" class="card bg-gray-700 rounded-lg shadow-md p-4 hover:bg-gray-600 transition duration-300">
+          <img src="https://picsum.photos/200" alt="Estrela" class="aspect-square object-cover">
+          <p>NomeEstrela</p>
+        </button>
+
+      </div>
+    </section>
+
+    <div class="overlay bg-black bg-opacity-50 fixed inset-0 hidden" id="overlay">
+      <div class="modal bg-gray-800 rounded-lg shadow-lg p-6 w-11/12 md:w-1/2 lg:w-1/3 mx-auto mt-20">
+        <h2 class="text-2xl font-bold mb-4" id="modal-title">Título do Planeta</h2>
+        <p class="mb-4 max-w-800 h-100 overflow-y-auto" id="modal-description">Descrição do planeta...</p>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300"
+          id="close-modal">Fechar</button>
+      </div>
+    </div>
+
   </main>
   <footer class="bg-gray-800 text-white p-4 text-center">
     <p>&copy; 2026 DocSpace. All rights reserved.</p>
   </footer>
+  <script src="documentario.js"></script>
 </body>
+
 </html>
