@@ -43,9 +43,6 @@ Site estático feito com Vite + Tailwind que reúne conteúdos em português sob
 - Sem acessibilidade completa (foco no modal, ARIA, ordem tab).
 - Dados de banner e textos ficam hardcoded; considerar mover para JSON e fetch estático.
 
-## Licença
-Não especificada. Adicione uma licença se o repositório for público.
-
 ---
 
 # DocSpace (English)
@@ -92,6 +89,3 @@ Static Vite + Tailwind site that showcases Solar System objects and astronomy co
 - Duplicate IDs and mis-nested `<head>` tags inside headers — clean up markup and swap IDs for classes.
 - Missing accessibility for modals (focus trap, ARIA).
 - Inline data — consider JSON + fetch for easier maintenance.
-
-## License
-Not declared yet.
